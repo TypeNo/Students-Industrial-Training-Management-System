@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap&family=Instrument+Serif:ital@1&display=swap&family=Kalam&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 80px 1fr; /* Adjusted height of the first row */
+  grid-template-columns: 1fr 5fr; /* Adjusted width of columns */
+  height: 100%;
+  width: 100%;
+}
+
+/* CSS for View Table */
+
+.right-column-table {
+  border-collapse: collapse;
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+.right-column-table th,
+.right-column-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.right-column-table th {
+  background-image: linear-gradient(to bottom, #ff9800, #ffb700);
+  font-weight: bold;
+}
+
+.right-column-table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+table.right-column-table tr:not(:first-child):hover {
+  background-color: rgb(200, 200, 200);
+}
+
+/* Update and delete Button CSS */
+
+.right-column-table button {
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.right-column-table button:hover {
+  background-color: rgba(243, 165, 49, 0.8);
+  transform: scale(1.15);
+}
+
+.right-column-table button u {
+  text-decoration: none;
+  color: white;
+}
+
+.borderless-button.update {
+  background-color: #007bff;
+}
+
+.borderless-button.delete {
+  background-color: #dc3545;
+}
+
+/* Insert or Update Table CSS */
+
+.right-column-distance table {
+  margin: auto;
+}
+
+.right-column-distance td {
+  padding: 7px;
+}
+
+/* Header */
+
+.logo {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  background: url("bg.jpg") bottom center/cover no-repeat;
+  font-size: 16px;
+  font-family: "Kalam", "Instrument Serif", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Logout CSS */
+
+.logout {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Kalam", "Instrument Serif", serif;
+}
+
+/* Menu, Logout, Table Hover */
+
+.logout:hover,
+.left-column-button:hover,
+.right-column-table button:hover {
+  cursor: pointer;
+  color: #ffb700;
+}
+
+/* Various Button CSS */
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-image: radial-gradient(circle at center, #ffcc3a, #ff7f50);
+}
+
+input[type="submit"],
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  accent-color: rgba(255, 195, 58, 255);
+}
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff7f50;
+  box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.button-text {
+  margin-bottom: 10px;
+}
+
+.left-column1,
+.left-column2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background: rgba(242, 242, 242, 255);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.left-column1 font {
+  margin: 0px 0px 10px 0px;
+}
+
+.left-column2 {
+  justify-content: space-between;
+}
+
+.right-column {
+  overflow: auto;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background: url("bg3.jpg") center center/cover no-repeat;
+}
+.right-column .right-column-distance {
+  font-family: "Khula", sans-serif;
+}
+
+.right-column form {
+  margin: 50px;
+}
+
+.right-column form table td {
+  line-height: 30px;
+}
+
+.right-content {
+  margin: 50px 50px 50px 50px;
+  font-size: 16px;
+  font-family: "Khula", sans-serif;
+}
+
+/* MainPage Image CSS */
+
+.right-pic-left {
+  border-radius: 5%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  margin: 0px 20px;
+  clear: both;
+  float: left;
+}
+
+.right-pic-right {
+  border-radius: 5%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  margin: 0px 20px;
+  clear: both;
+  float: right;
+}
+
+.right-pic-left,
+.right-pic-right {
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-pic-left:hover,
+.right-pic-right:hover {
+  transform: scale(1.1);
+}
+
+/* Animation Keyframes for Image */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MainPage Content CSS */
+
+.right-content-1,
+.right-content-2,
+.right-content-3 {
+  margin: 0px 0px 250px 0px;
+  line-height: 50px;
+  clear: both;
+}
+
+.right-content-3 {
+  margin: 0px 0px 100px 0px;
+}
+
+.right-content-theme {
+  font-weight: bold;
+  font-size: 32px;
+  /* margin-bottom: 20px; */
+}
+
+.right-column-distance {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.right-column-table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.borderless-button {
+  border: none;
+  background-color: transparent;
+}
+
+.left-column-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+
+  /* Animation properties */
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Keyframes for the animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.panel {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  text-align: center;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Align items horizontally to the center */
+  align-items: center; /* Align items vertically to the center */
+}
+
+.panel .searchbox {
+  margin-top: 10px;
+  margin-right: 10px; /* Add margin to separate elements */
+  display: flex;
+}
+
+.panel .searchbox input[type="search"] {
+  width: 500px;
+}
+
+.panel .submit input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.panel .sortfield {
+  margin-left: 10px; /* Add margin to separate elements */
+  margin-top: 10px;
+}
+
+.panel .sortfield {
+  display: inline-block;
+  position: relative;
+}
+
+.searchbox,
+.sortfield {
+  margin-bottom: 10px;
+}
+
+.Evaluate {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.Evaluate:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#Approve:hover {
+  background-color: #4cc86d; /* Darker blue color */
+}
+
+#Reject:hover {
+  background-color: #c8614c; /* Darker red color */
+}
+
+.error-message {
+  color: red;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+/* Addition css for cat */
+.cat {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  z-index: 1;
+}
